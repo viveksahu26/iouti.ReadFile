@@ -12,3 +12,11 @@
 //WriteFile writes data to a file named by filename. If the file does not exist, 
 
 //WriteFile creates it with permissions perm (before umask); otherwise WriteFile truncates it before writing, without changing permissions
+
+4) func OpenFile(name string, flag int, perm FileMode) (*File, error)
+
+//OpenFile is the generalized open call; most users will use Open or Create instead. It opens the named file with specified flag (O_RDONLY etc.). 
+
+//If the file does not exist, and the O_CREATE flag is passed, it is created with mode perm (before umask). 
+
+//If successful, methods on the returned File can be used for I/O. If there is an error, it will be of type *PathError.
